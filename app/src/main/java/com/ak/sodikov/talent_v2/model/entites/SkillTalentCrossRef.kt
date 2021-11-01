@@ -10,11 +10,9 @@ import org.jetbrains.annotations.NotNull
 data class SkillTalentCrossRef (
 
     @ColumnInfo (name = "skillId")
-    @NotNull
     val skillId : Int,
 
     @ColumnInfo (name = "talentId")
-    @NonNull
-    val talentId : Int
+     val talentId : Int
   )
 
