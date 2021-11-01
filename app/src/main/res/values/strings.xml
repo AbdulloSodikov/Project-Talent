@@ -2,4 +2,7 @@
     <string name="app_name">Talent</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hint_city">город</string>
+    <string name="text_more_about_talent"><![CDATA[узнать больше -->]]></string>
+    <string name="hint_adout_talent">about</string>
 </resources>

@@ -37,7 +37,7 @@ class AddNewPersonFragment : Fragment() {
             val name = mBinding.textAddName.text.toString()
 
             if (name.isNullOrEmpty()) {
-                mBinding.etAddSureName.error
+                mBinding.etAddSureName.error = "Необходимо запольнить"
             } else {
                 mViewModel.insert(Talent(talentSurname = sureName, talentName = name)) {
                     APP_ACTIVITY.mNavController.navigate(R.id.action_addPersonFragment_to_listFragment)

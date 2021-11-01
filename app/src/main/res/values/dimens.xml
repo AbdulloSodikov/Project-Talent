@@ -6,4 +6,5 @@
     <dimen name="margin_norm">16dp</dimen>
     <dimen name="text_size_large">20sp</dimen>
     <dimen name="text_size_norm">16sp</dimen>
+    <dimen name="test_size_small">12sp</dimen>
 </resources>

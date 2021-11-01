@@ -10,26 +10,27 @@
         android:id="@+id/ic_default_person2"
         android:layout_width="100dp"
         android:layout_height="100dp"
+        android:layout_marginTop="@dimen/margin_norm"
         android:src="@drawable/ic_baseline_person_24"
         app:civ_border_color="@color/black"
-        android:layout_marginTop="@dimen/margin_norm"
         app:civ_circle_background_color="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toTopOf="parent">
 
     </de.hdodenhof.circleimageview.CircleImageView>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/et_add_sureName"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         app:errorEnabled="true"
-        app:layout_constraintTop_toBottomOf="@id/ic_default_person2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ic_default_person2"
         tools:layout_editor_absoluteY="200dp">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -40,12 +41,14 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout"
+        android:id="@+id/et_add_name"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
+        app:errorEnabled="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_add_sureName">
@@ -55,15 +58,37 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Имя" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/et_add_email"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        app:errorEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_add_name">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/text_add_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email" />
+
+
+
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/btn_save"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="Save"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+        android:text="Save" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
