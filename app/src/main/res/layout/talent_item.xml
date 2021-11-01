@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_norm"
+    app:cardCornerRadius="@dimen/card_corner_radius"
+    app:cardElevation="@dimen/card_elevation">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/item_layout_top"
+            android:layout_width="match_parent"
+            android:layout_height="86dp"
+            android:background="@color/teal_701"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ic_default_person"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="6dp"
+android:src="@drawable/ic_baseline_person_24"
+                app:civ_circle_background_color="@color/white"
+                app:civ_border_color="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </de.hdodenhof.circleimageview.CircleImageView>
+
+            <TextView
+                android:id="@+id/tv_person_full_name"
+                android:layout_width="200dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="@dimen/margin_min"
+                android:layout_marginTop="@dimen/margin_norm"
+                android:lines="1"
+                android:text="Имрон Баротов"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_large"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/ic_default_person"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_person_of_profession"
+                android:layout_width="150dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="@dimen/margin_min"
+                android:layout_marginTop="@dimen/margin_min"
+                android:text="Веб разработчик"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_norm"
+                app:layout_constraintStart_toEndOf="@+id/ic_default_person"
+                app:layout_constraintTop_toBottomOf="@+id/tv_person_full_name" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/item_layout_top">
+
+            <TextView
+                android:id="@+id/tv_education"
+                android:layout_width="wrap_content"
+                android:lines="1"
+                android:layout_height="20dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="Образование:"
+                android:textSize="@dimen/text_size_norm"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="NotSibling" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip4"
+                android:layout_width="90dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_education" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip5"
+                android:layout_width="90dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toEndOf="@+id/chip4"
+                app:layout_constraintTop_toBottomOf="@+id/tv_education" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip6"
+                android:layout_width="90dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toEndOf="@+id/chip5"
+                app:layout_constraintTop_toBottomOf="@+id/tv_education" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip7"
+                android:layout_width="90dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toEndOf="@+id/chip6"
+                app:layout_constraintTop_toBottomOf="@+id/tv_education" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:text="Связаться"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/chip7" />
+
+            <TextView
+                android:id="@+id/tv_learn_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:text="узнать больше -->"
+                android:textColor="@color/purple_700"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/button"
+                app:layout_constraintEnd_toStartOf="@+id/button"
+                app:layout_constraintTop_toTopOf="@+id/button" />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
