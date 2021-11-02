@@ -1,4 +1,4 @@
-package com.ak.sodikov.talent_v2.screens.list
+package com.ak.sodikov.talent_v2.screens.talent_list_screen
 
 import android.view.LayoutInflater
 import android.view.View
@@ -9,13 +9,20 @@ import com.ak.sodikov.talent_v2.R
 import com.ak.sodikov.talent_v2.model.entites.Talent
 
 class TalentAdapter : RecyclerView.Adapter<TalentAdapter.TalentHolder>() {
-private var mListTalent = emptyList<Talent>()
 
-    class TalentHolder (view: View) : RecyclerView.ViewHolder (view) {
+    private var mListTalent = emptyList<Talent>()
+    var onItemClick : ((talentId:Int) -> Unit)? = null
+
+   inner class TalentHolder (view: View) : RecyclerView.ViewHolder (view) {
         val fullName:TextView = view.findViewById(R.id.tv_person_full_name)
         val profession:TextView = view.findViewById(R.id.tv_person_of_profession)
         val education:TextView = view.findViewById(R.id.tv_education)
 
+        init {
+            view.setOnClickListener {
+                onItemClick?.invoke(absoluteAdapterPosition)
+            }
+        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TalentHolder {
@@ -25,9 +32,8 @@ private var mListTalent = emptyList<Talent>()
 
     override fun onBindViewHolder(holder: TalentHolder, position: Int) {
         val talent = mListTalent[position]
-
         holder.fullName.text =  "${talent.talentSurname.toString()} ${talent.talentName.toString()}"
-        holder.profession.text = talent.professionName.toString()
+        holder.profession.text = talent.professionNameInTalent.toString()
         holder.education.text = "Образование: ${mListTalent[position].info.toString()}"
     }
 
