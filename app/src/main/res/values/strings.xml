@@ -5,4 +5,5 @@
     <string name="hint_city">город</string>
     <string name="text_more_about_talent"><![CDATA[узнать больше -->]]></string>
     <string name="hint_adout_talent">about</string>
+    <string name="title_talent">Talent</string>
 </resources>
