@@ -3,28 +3,19 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/KotlinProject_new/Project-Talent/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.35625" />
-        <entry key="..\:/KotlinProject_new/Project-Talent/app/src/main/res/drawable/ic_location.xml" value="0.35625" />
-        <entry key="..\:/KotlinProject_new/Project-Talent/app/src/main/res/layout/drop_down_item_education.xml" value="0.3359375" />
-        <entry key="..\:/KotlinProject_new/Project-Talent/app/src/main/res/layout/dropdpwn_item_work_state.xml" value="0.3359375" />
-        <entry key="..\:/KotlinProject_new/Project-Talent/app/src/main/res/layout/fragment_add_person.xml" value="0.3359375" />
-        <entry key="..\:/KotlinProject_new/Project-Talent/app/src/main/res/layout/fragment_list.xml" value="0.3359375" />
-        <entry key="..\:/KotlinProject_new/Project-Talent/app/src/main/res/layout/fragment_person.xml" value="0.3359375" />
-        <entry key="..\:/KotlinProject_new/Project-Talent/app/src/main/res/layout/fragment_start.xml" value="0.35260416666666666" />
-        <entry key="..\:/KotlinProject_new/Project-Talent/app/src/main/res/layout/option_item_work_state.xml" value="0.3359375" />
-        <entry key="..\:/KotlinProject_new/Project-Talent/app/src/main/res/layout/options_item.xml" value="0.3359375" />
-        <entry key="..\:/KotlinProject_new/Project-Talent/app/src/main/res/layout/talent_item.xml" value="0.3359375" />
         <entry key="..\:/KotlinProject_new/Talent_v2/app/src/main/res/layout/activity_main.xml" value="0.2859375" />
         <entry key="..\:/Users/Dell/Desktop/Kotlin_project/Talent_v2/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.18854166666666666" />
         <entry key="..\:/Users/Dell/Desktop/Kotlin_project/Talent_v2/app/src/main/res/drawable/ic_delete.xml" value="0.20364583333333333" />
         <entry key="..\:/Users/Dell/Desktop/Kotlin_project/Talent_v2/app/src/main/res/drawable/ic_exit.xml" value="0.18854166666666666" />
         <entry key="..\:/Users/Dell/Desktop/Kotlin_project/Talent_v2/app/src/main/res/drawable/ic_launcher_background.xml" value="0.18854166666666666" />
+        <entry key="..\:/Users/Dell/Desktop/Kotlin_project/Talent_v2/app/src/main/res/drawable/ic_location.xml" value="0.18333333333333332" />
         <entry key="..\:/Users/Dell/Desktop/Kotlin_project/Talent_v2/app/src/main/res/layout/activity_main.xml" value="0.22" />
-        <entry key="..\:/Users/Dell/Desktop/Kotlin_project/Talent_v2/app/src/main/res/layout/fragment_add_person.xml" value="0.22" />
+        <entry key="..\:/Users/Dell/Desktop/Kotlin_project/Talent_v2/app/src/main/res/layout/fragment_add_person.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/Dell/Desktop/Kotlin_project/Talent_v2/app/src/main/res/layout/fragment_list.xml" value="0.4178525226390686" />
         <entry key="..\:/Users/Dell/Desktop/Kotlin_project/Talent_v2/app/src/main/res/layout/fragment_person.xml" value="0.19166666666666668" />
         <entry key="..\:/Users/Dell/Desktop/Kotlin_project/Talent_v2/app/src/main/res/layout/fragment_start.xml" value="0.4466666666666667" />
         <entry key="..\:/Users/Dell/Desktop/Kotlin_project/Talent_v2/app/src/main/res/layout/person_item.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/Dell/Desktop/Kotlin_project/Talent_v2/app/src/main/res/layout/talent_item.xml" value="0.22" />
         <entry key="..\:/Users/Dell/Desktop/Kotlin_project/Talent_v2/app/src/main/res/menu/person_action_delete.xml" value="0.1875" />
         <entry key="..\:/Users/Dell/Desktop/Kotlin_project/Talent_v2/app/src/main/res/menu/person_action_menu.xml" value="0.1875" />
       </map>

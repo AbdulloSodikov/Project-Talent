@@ -4,7 +4,7 @@ import androidx.lifecycle.LiveData
 import com.ak.sodikov.talent_v2.db.DatabaseRepository
 import com.ak.sodikov.talent_v2.model.entites.Talent
 
-class AppIlmhonaRepository():DatabaseRepository {
+class AppIlmhonaRepositoryImpl():DatabaseRepository {
     override val allTalent: LiveData<List<Talent>>
         get() = TODO("Not yet implemented")
 
