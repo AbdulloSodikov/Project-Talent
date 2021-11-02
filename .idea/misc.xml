@@ -5,6 +5,8 @@
       <map>
         <entry key="..\:/KotlinProject_new/Project-Talent/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.35625" />
         <entry key="..\:/KotlinProject_new/Project-Talent/app/src/main/res/drawable/ic_location.xml" value="0.35625" />
+        <entry key="..\:/KotlinProject_new/Project-Talent/app/src/main/res/layout/drop_down_item_education.xml" value="0.3359375" />
+        <entry key="..\:/KotlinProject_new/Project-Talent/app/src/main/res/layout/dropdpwn_item_work_state.xml" value="0.3359375" />
         <entry key="..\:/KotlinProject_new/Project-Talent/app/src/main/res/layout/fragment_add_person.xml" value="0.3359375" />
         <entry key="..\:/KotlinProject_new/Project-Talent/app/src/main/res/layout/fragment_list.xml" value="0.3359375" />
         <entry key="..\:/KotlinProject_new/Project-Talent/app/src/main/res/layout/fragment_person.xml" value="0.3359375" />
