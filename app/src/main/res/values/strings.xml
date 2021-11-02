@@ -12,4 +12,14 @@
         <item>Не могу работать</item>
     </string-array>
 
+    <string-array name="education">
+        <item>Обучение не завершено </item>
+        <item>Учащийся средней школы</item>
+        <item>выпусник средней школы диплом или эквивалент</item>
+        <item>Прохожу обучение в университете</item>
+        <item>Степень бакалавра</item>
+        <item>Степень магистра</item>
+        <item>Докторская степень</item>
+    </string-array>
+
 </resources>

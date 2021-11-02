@@ -38,8 +38,11 @@ class AddNewPersonFragment : Fragment() {
     private fun initialization() {
         mViewModel = ViewModelProvider(this).get(AddNewPersonFragmentViewModel::class.java)
         val workState = resources.getStringArray(R.array.work_state)
+        val education = resources.getStringArray(R.array.education)
         val workStateAdapter = ArrayAdapter(requireContext(), R.layout.dropdpwn_item_work_state, workState)
+        val educationAdapter = ArrayAdapter(requireContext(), R.layout.drop_down_item_education,education)
         mBinding.autoCompletWorkState.setAdapter(workStateAdapter)
+        mBinding.autoCompletEducation.setAdapter(educationAdapter)
 
         mBinding.btnSave.setOnClickListener {
             val sureName = mBinding.textAddSureName.text.toString()
