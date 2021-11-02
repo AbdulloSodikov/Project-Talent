@@ -6,4 +6,10 @@
     <string name="text_more_about_talent"><![CDATA[узнать больше -->]]></string>
     <string name="hint_adout_talent">about</string>
     <string name="title_talent">Talent</string>
+
+    <string-array name="work_state">
+        <item>Могу работать</item>
+        <item>Не могу работать</item>
+    </string-array>
+
 </resources>

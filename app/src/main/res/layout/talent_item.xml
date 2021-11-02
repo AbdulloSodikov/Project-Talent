@@ -9,7 +9,6 @@
     app:cardElevation="@dimen/card_elevation"
     android:outlineSpotShadowColor="@color/md_indigo_50">
 
-
     <androidx.constraintlayout.widget.ConstraintLayout
 
         android:layout_width="match_parent"
