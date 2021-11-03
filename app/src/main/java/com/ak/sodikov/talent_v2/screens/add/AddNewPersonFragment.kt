@@ -55,9 +55,9 @@ class AddNewPersonFragment : Fragment() {
                     APP_ACTIVITY.mNavController.navigate(R.id.action_addPersonFragment_to_listFragment)
                 }
             }
-
         }
     }
+
     override fun onDestroyView() {
         super.onDestroyView()
         binding = null
