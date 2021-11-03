@@ -2,10 +2,11 @@
     <string name="app_name">Talent</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="hint_city">город</string>
+    <string name="hint_city">Город</string>
     <string name="text_more_about_talent"><![CDATA[узнать больше -->]]></string>
     <string name="hint_adout_talent">about</string>
     <string name="title_talent">Talent</string>
+    <string name="hint_profession">Профессия</string>
 
     <string-array name="work_state">
         <item>Могу работать</item>
@@ -20,6 +21,24 @@
         <item>Степень бакалавра</item>
         <item>Степень магистра</item>
         <item>Докторская степень</item>
+    </string-array>
+
+    <string-array name="profession">
+        <item>Web developer</item>
+        <item>Back-end developer</item>
+        <item>Full Stack developer</item>
+        <item>Android developer</item>
+        <item>iOC developer</item>
+        <item>Graphic developer</item>
+        <item>UX/UI developer</item>
+    </string-array>
+    <string-array name="city">
+        <item>Душанбе</item>
+        <item>Хучанд</item>
+        <item>Истаравшан</item>
+        <item>Куляб</item>
+        <item>Хорог</item>
+        <item>Вахдат</item>
     </string-array>
 
 </resources>

@@ -49,17 +49,22 @@ class MainActivity : AppCompatActivity() {
         }
         private suspend fun dataSours() {
             val profession = listOf(
-                Profession(0, "Android developer"),
-                Profession(1, "Web developer"),
-                Profession(2, "iOC developer"),
-                Profession(3, "Full St")
+                Profession(0, "Web developer"),
+                Profession(1, "Back-end developer"),
+                Profession(2, "Full Stack developer"),
+                Profession(3, "Android developer"),
+                Profession(4, "iOC developer"),
+                Profession(4, "Graphic developer"),
+                Profession(4, "UX/UI developer"),
             )
 
             val city = listOf(
-                City(0, "Dushanbe"),
-                City(1, "Khujand"),
-                City(2, "Istaravshan"),
-                City(3, "Масква")
+                City(0, "Душанбе"),
+                City(1, "Хучанд"),
+                City(2, "Истаравшан"),
+                City(3, "Куляб"),
+                City(4, "Хорог"),
+                City(4, "Вахдат")
             )
             val skills = listOf<Skill>(
                 Skill(0, "Java"),
@@ -73,19 +78,19 @@ class MainActivity : AppCompatActivity() {
 
                 Talent(
                     0, "Nurlaiev", "Muhammad", "nuraliev.m@gmail.com",
-                    "Работаю", "Я Нуралиев М.", "Android developer", "Dushanbe"
+                    "Работаю", "Я Нуралиев М.", "Степень магистра","Web developer", "Dushanbe"
                 ),
                 Talent(
                     1, "Sodikov", "Abdullo", "sodikov.a@gmail.com",
-                    "могу работать", "Я Содиков А.", "Web developer", "Khujand"
+                    "могу работать", "Я Содиков А.","Степень магистра", "Android developer", "Khujand"
                 ),
                 Talent(
                     2, "Ibodov", "Parviz", "parviz@gmail.com",
-                    "могу работать", "Y Parviz.", "iOC developer", "Moskov"
+                    "могу работать", "Y Parviz.","Степень магистра", "iOC developer", "Moskov"
                 ),
                 Talent(
                     3, "Sattorova", "Mati", "sattorova@gmail.com",
-                    " не могу работать", "Я.", "Full St", "Khujand"
+                    " не могу работать", "Я.","Степень магистра", "Full Stack developer", "Khujand"
                 )
             )
 
@@ -101,9 +106,9 @@ class MainActivity : AppCompatActivity() {
             lifecycleScope.launch {
                 profession.forEach { roomDao.insertProfession(it) }
                 city.forEach { roomDao.insertCity(it) }
-                skills.forEach { roomDao.insertSkills(it) }
-                person.forEach { roomDao.insertTalent(it) }
-                skillsOfTalent.forEach { roomDao.insertTalentAndSkills(it) }
+               // skills.forEach { roomDao.insertSkills(it) }
+                //person.forEach { roomDao.insertTalent(it) }
+                //skillsOfTalent.forEach { roomDao.insertTalentAndSkills(it) }
 
             }
 

@@ -16,19 +16,20 @@ import androidx.room.PrimaryKey
             entity = City::class,
             parentColumns = ["cityName"],
             childColumns = ["cityNameInTalent"]
+
 )]
 )
+
 data class Talent(
     @PrimaryKey(autoGenerate = true) val talentId: Int = 0,
-    val talentSurname: String = "",
-    val talentName: String = "",
+    @ColumnInfo val talentSurname: String = "",
+    @ColumnInfo val talentName: String = "",
     val email: String = "",
     val workState: String = "",
     val info: String = "",
-    @ColumnInfo(name = "professionNameInTalent")
+    @ColumnInfo (name = "professionNameInTalent" )
     val professionNameInTalent: String = "", // внешний ключ
-    @ColumnInfo(name = "cityNameInTalent")
     val cityNameInTalent: String = "", // внешний ключ
-    val education : String = ""
+
 )
 
