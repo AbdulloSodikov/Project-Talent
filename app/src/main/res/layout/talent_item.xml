@@ -25,8 +25,8 @@
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/ic_default_person"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:layout_margin="6dp"
                 android:src="@drawable/ic_baseline_person_24"
                 app:civ_border_color="@color/white"
@@ -83,52 +83,23 @@
                 android:layout_marginTop="8dp"
                 android:lines="1"
                 android:text="Образование:"
-                android:textSize="@dimen/test_size_small"
+                android:textSize="@dimen/text_size_norm"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:ignore="NotSibling" />
-
-            <Button
-                android:id="@+id/button"
-                android:layout_width="115dp"
-                android:layout_height="38dp"
-                android:layout_marginTop="99dp"
-                android:layout_marginEnd="16dp"
-                android:layout_marginBottom="16dp"
-                android:text="Связаться"
-                android:textSize="12sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/tv_learn_more"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="12dp"
-                android:layout_marginBottom="16dp"
-                android:text="@string/text_more_about_talent"
-                android:textColor="@color/purple_700"
-                android:textSize="12sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/button"
-                app:layout_constraintTop_toTopOf="@+id/button" />
 
             <TextView
                 android:id="@+id/tv_city"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
-                android:layout_marginEnd="4dp"
                 android:layout_marginBottom="16dp"
                 android:hint="@string/hint_city"
                 android:textColor="@color/purple_700"
                 android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/tv_learn_more"
-                app:layout_constraintStart_toEndOf="@+id/imageView"
-                app:layout_constraintTop_toTopOf="@+id/button" />
+                app:layout_constraintStart_toEndOf="@+id/imageView" />
 
             <ImageView
                 android:id="@+id/imageView"
@@ -148,7 +119,6 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="16dp"
                 android:hint="@string/hint_adout_talent"
-                app:layout_constraintBottom_toTopOf="@+id/button"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tv_education" />

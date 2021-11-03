@@ -11,7 +11,7 @@ data class ProfessionWithTalent (
 
     @Relation (
         parentColumn = "professionName",
-        entityColumn = "professionName"
+        entityColumn = "professionNameInTalent"
             )
     var talents : List <Talent>
 

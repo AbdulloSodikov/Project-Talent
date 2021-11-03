@@ -1,4 +1,4 @@
-package com.ak.sodikov.talent_v2.screens.add
+package com.ak.sodikov.talent_v2.screens.talent_add_screen
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -9,13 +9,13 @@ import android.widget.ArrayAdapter
 import android.widget.AutoCompleteTextView
 import androidx.lifecycle.ViewModelProvider
 import com.ak.sodikov.talent_v2.R
-import com.ak.sodikov.talent_v2.databinding.FragmentAddPersonBinding
+import com.ak.sodikov.talent_v2.databinding.FragmentTalentAddBinding
 import com.ak.sodikov.talent_v2.model.entites.Talent
 import com.ak.sodikov.talent_v2.utillite.APP_ACTIVITY
 
 
 class AddNewPersonFragment : Fragment() {
-    private var binding: FragmentAddPersonBinding? = null
+    private var binding: FragmentTalentAddBinding? = null
     private val mBinding get() = binding!!
     lateinit var mViewModel: AddNewPersonFragmentViewModel
     lateinit var autoCompleteWorkState : AutoCompleteTextView
@@ -24,7 +24,7 @@ class AddNewPersonFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentAddPersonBinding.inflate(inflater)
+        binding = FragmentTalentAddBinding.inflate(inflater)
 
         return mBinding.root
 
@@ -37,13 +37,7 @@ class AddNewPersonFragment : Fragment() {
 
     private fun initialization() {
         mViewModel = ViewModelProvider(this).get(AddNewPersonFragmentViewModel::class.java)
-        val workState = resources.getStringArray(R.array.work_state)
-        val education = resources.getStringArray(R.array.education)
-        val workStateAdapter = ArrayAdapter(requireContext(), R.layout.dropdpwn_item_work_state, workState)
-        val educationAdapter = ArrayAdapter(requireContext(), R.layout.drop_down_item_education,education)
-        mBinding.autoCompletWorkState.setAdapter(workStateAdapter)
-        mBinding.autoCompletEducation.setAdapter(educationAdapter)
-
+        creatDropDown()
         mBinding.btnSave.setOnClickListener {
             val sureName = mBinding.textAddSureName.text.toString()
             val name = mBinding.textAddName.text.toString()
@@ -61,5 +55,14 @@ class AddNewPersonFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         binding = null
+    }
+    fun creatDropDown(){
+        val workState = resources.getStringArray(R.array.work_state)
+        val education = resources.getStringArray(R.array.education)
+        val workStateAdapter = ArrayAdapter(requireContext(), R.layout.dropdpwn_item_work_state, workState)
+        val educationAdapter = ArrayAdapter(requireContext(), R.layout.drop_down_item_education,education)
+        mBinding.autoCompletWorkState.setAdapter(workStateAdapter)
+        mBinding.autoCompletEducation.setAdapter(educationAdapter)
+
     }
 }

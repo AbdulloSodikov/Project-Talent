@@ -1,4 +1,4 @@
-package com.ak.sodikov.talent_v2.screens.start
+package com.ak.sodikov.talent_v2.screens.start_screen
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

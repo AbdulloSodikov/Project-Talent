@@ -1,10 +1,10 @@
-package com.ak.sodikov.talent_v2.screens.list
+package com.ak.sodikov.talent_v2.screens.talent_list_screen
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import com.ak.sodikov.talent_v2.utillite.REPOSITORY
 
-class ListFragmentViewModel (application : Application) : AndroidViewModel(application) {
+class TalentListFragmentViewModel (application : Application) : AndroidViewModel(application) {
 val allTalent = REPOSITORY.allTalent
 
 }
