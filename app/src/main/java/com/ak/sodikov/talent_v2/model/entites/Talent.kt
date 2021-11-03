@@ -22,13 +22,16 @@ import androidx.room.PrimaryKey
 
 data class Talent(
     @PrimaryKey(autoGenerate = true) val talentId: Int = 0,
-    @ColumnInfo val talentSurname: String = "",
-    @ColumnInfo val talentName: String = "",
-    val email: String = "",
-    val workState: String = "",
-    val info: String = "",
+    val talentSurname: String,
+    val talentName: String,
+    val email: String,
+    val workState: String,
+    val info: String?,
+    val education: String,
+
     @ColumnInfo (name = "professionNameInTalent" )
     val professionNameInTalent: String = "", // внешний ключ
+    @ColumnInfo (name = "cityNameInTalent" )
     val cityNameInTalent: String = "", // внешний ключ
 
 )
