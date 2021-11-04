@@ -4,7 +4,7 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="hint_city">Город</string>
     <string name="text_more_about_talent"><![CDATA[узнать больше -->]]></string>
-    <string name="hint_adout_talent">about</string>
+    <string name="hint_about_talent">about</string>
     <string name="title_talent">Talent</string>
     <string name="hint_profession">Профессия</string>
 

@@ -34,5 +34,6 @@ data class Talent(
     @ColumnInfo (name = "cityNameInTalent" )
     val cityNameInTalent: String = "", // внешний ключ
 
+///
 )
 

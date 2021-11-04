@@ -29,7 +29,7 @@
                 android:layout_marginTop="@dimen/margin_norm"
                 android:src="@drawable/ic_baseline_person_24"
                 app:civ_border_color="@color/black"
-                app:civ_circle_background_color="@color/white"
+                app:civ_circle_background_color="@color/teal_701"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">

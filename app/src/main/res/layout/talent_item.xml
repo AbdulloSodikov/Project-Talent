@@ -40,13 +40,13 @@
             <TextView
                 android:id="@+id/tv_person_full_name"
                 android:layout_width="200dp"
-                android:layout_height="25dp"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/margin_min"
                 android:layout_marginTop="@dimen/margin_norm"
                 android:lines="1"
                 android:text="Имрон Баротов"
                 android:textColor="@color/black"
-                android:textSize="@dimen/text_size_large"
+                android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toEndOf="@+id/ic_default_person"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -54,12 +54,12 @@
             <TextView
                 android:id="@+id/tv_person_of_profession"
                 android:layout_width="150dp"
-                android:layout_height="48dp"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/margin_min"
                 android:layout_marginTop="@dimen/margin_min"
                 android:text="Веб разработчик"
                 android:textColor="@color/black"
-                android:textSize="@dimen/text_size_norm"
+                android:textSize="16sp"
                 app:layout_constraintStart_toEndOf="@+id/ic_default_person"
                 app:layout_constraintTop_toBottomOf="@+id/tv_person_full_name" />
 
@@ -67,7 +67,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="0dp"
-            android:layout_height="150dp"
+            android:layout_height="60dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
@@ -83,7 +83,7 @@
                 android:layout_marginTop="8dp"
                 android:lines="1"
                 android:text="Образование:"
-                android:textSize="@dimen/text_size_norm"
+                android:textSize="@dimen/test_size_small"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -93,35 +93,23 @@
                 android:id="@+id/tv_city"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:layout_marginBottom="16dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
                 android:hint="@string/hint_city"
                 android:textColor="@color/purple_700"
                 android:textSize="12sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/imageView" />
+                app:layout_constraintStart_toEndOf="@+id/imageView"
+                app:layout_constraintTop_toBottomOf="@+id/tv_education" />
 
             <ImageView
                 android:id="@+id/imageView"
                 android:layout_width="15dp"
                 android:layout_height="18dp"
-                android:layout_marginStart="12dp"
-                android:layout_marginBottom="24dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:srcCompat="@drawable/ic_location" />
-
-            <TextView
-                android:id="@+id/tv_aboutTalent"
-                android:layout_width="318dp"
-                android:layout_height="0dp"
-                android:layout_marginStart="32dp"
+                android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
-                android:layout_marginEnd="16dp"
-                android:hint="@string/hint_adout_talent"
-                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_education" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_education"
+                app:srcCompat="@drawable/ic_location" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
