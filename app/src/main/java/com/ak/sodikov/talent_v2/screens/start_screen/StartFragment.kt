@@ -38,10 +38,11 @@ class StartFragment : Fragment() {
             }
         }
         mBinding.btnAddTalent.setOnClickListener {
-            APP_ACTIVITY.mNavController.navigate(R.id.action_startFragment_to_addPersonFragment)
+            mViewModel.initDataBase(TYPE_ROOM) {
+                APP_ACTIVITY.mNavController.navigate(R.id.action_startFragment_to_addPersonFragment)
+            }
         }
     }
-
     override fun onDestroyView() {
         super.onDestroyView()
         binding = null
