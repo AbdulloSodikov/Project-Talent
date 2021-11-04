@@ -12,6 +12,8 @@ import com.ak.sodikov.talent_v2.R
 import com.ak.sodikov.talent_v2.databinding.FragmentListBinding
 import com.ak.sodikov.talent_v2.model.entites.Talent
 import com.ak.sodikov.talent_v2.utillite.APP_ACTIVITY
+import com.ak.sodikov.talent_v2.utillite.TALENT_ID
+import com.ak.sodikov.talent_v2.utillite.showToast
 
 
 class TalentListFragment : Fragment() {
@@ -31,12 +33,11 @@ class TalentListFragment : Fragment() {
         binding = FragmentListBinding.inflate(layoutInflater)
         return mBinding.root
     }
-
     override fun onStart() {
         super.onStart()
         initialization()
-    }
 
+    }
     private fun initialization() {
         mViewModelTalent = ViewModelProvider(this).get(TalentListFragmentViewModel::class.java)
         mAdapter = TalentAdapter()
@@ -44,14 +45,17 @@ class TalentListFragment : Fragment() {
         mRecyclerView.adapter = mAdapter
 
         mAdapter.onItemClick = {
-            APP_ACTIVITY.mNavController.navigate(R.id.action_listFragment_to_personFragment)
+            val bundle = Bundle()
+            bundle.putSerializable(TALENT_ID,it)
+            APP_ACTIVITY.mNavController.navigate(R.id.action_listFragment_to_personFragment, bundle)
         }
         mObserverList = Observer {
             val list = it.asReversed()
             mAdapter.setList(list)
         }
         mViewModelTalent.allTalent.observe(viewLifecycleOwner,mObserverList)
-        mBinding.btnAddTalent.setOnClickListener {
+
+                mBinding.btnAddTalent.setOnClickListener {
             APP_ACTIVITY.mNavController.navigate(R.id.action_listFragment_to_addPersonFragment)
         }
     }

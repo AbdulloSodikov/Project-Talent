@@ -109,7 +109,6 @@ class MainActivity : AppCompatActivity() {
                // skills.forEach { roomDao.insertSkills(it) }
                 //person.forEach { roomDao.insertTalent(it) }
                 //skillsOfTalent.forEach { roomDao.insertTalentAndSkills(it) }
-
             }
 
         }

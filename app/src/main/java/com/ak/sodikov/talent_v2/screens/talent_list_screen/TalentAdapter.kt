@@ -11,7 +11,7 @@ import com.ak.sodikov.talent_v2.model.entites.Talent
 class TalentAdapter : RecyclerView.Adapter<TalentAdapter.TalentHolder>() {
 
     private var mListTalent = emptyList<Talent>()
-    var onItemClick : ((talentId:Int) -> Unit)? = null
+    var onItemClick : ((talent: Talent ) -> Unit)? = null
 
    inner class TalentHolder (view: View) : RecyclerView.ViewHolder (view) {
         val fullName:TextView = view.findViewById(R.id.tv_person_full_name)
@@ -20,7 +20,7 @@ class TalentAdapter : RecyclerView.Adapter<TalentAdapter.TalentHolder>() {
 
         init {
             view.setOnClickListener {
-                onItemClick?.invoke(absoluteAdapterPosition)
+                onItemClick?.invoke(mListTalent[absoluteAdapterPosition])
             }
         }
     }

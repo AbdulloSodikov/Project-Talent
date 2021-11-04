@@ -9,6 +9,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 class AddNewPersonFragmentViewModel(application: Application) : AndroidViewModel(application) {
+
     fun insert(talent: Talent, onSuccess: () -> Unit) {
         viewModelScope.launch(Dispatchers.Main) {
             REPOSITORY.insertTalent(talent) {

@@ -8,6 +8,10 @@ class AppRoomRepositoryImpl(private val dao:AppTalentRoomDao) : DatabaseReposito
     override val allTalent: LiveData<List<Talent>>
         get() = dao.getAllTalent()
 
+    override suspend fun getTalent(id: Int): Talent {
+        return dao.getTalent(id)
+    }
+
     override suspend fun insertTalent(talent: Talent, onSuccess: () -> Unit) {
         dao.insertTalent(talent)
         onSuccess()
