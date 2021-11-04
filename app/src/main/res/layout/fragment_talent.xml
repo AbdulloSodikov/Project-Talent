@@ -15,7 +15,7 @@
         android:layout_marginTop="@dimen/margin_norm"
         android:src="@drawable/ic_baseline_person_24"
         app:civ_border_color="@color/black"
-        app:civ_circle_background_color="@color/b"
+        app:civ_circle_background_color="@color/teal_701"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -66,21 +66,66 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_education" />
 
+
     <androidx.cardview.widget.CardView
         android:id="@+id/skill_1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_skill"
-        style="@style/skill_card"
+        style="@style/card_skill"
+        android:layout_marginStart="16dp"
         app:cardCornerRadius="5dp"
         app:cardElevation="5dp"
-        >
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_skill">
 
         <TextView
-            android:id="@+id/textView6"
-            android:hint="skill"
+            android:id="@+id/text_skill_1"
             style="@style/skill_text"
-            android:background="@color/teal_701"/>
+            android:background="@color/teal_701"
+            android:hint="skill" />
     </androidx.cardview.widget.CardView>
 
+    <androidx.cardview.widget.CardView
+        android:id="@+id/skill_2"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="5dp"
+        app:layout_constraintStart_toEndOf="@id/skill_1"
+        app:layout_constraintTop_toBottomOf="@+id/tv_skill"
+        style="@style/card_skill">
+
+        <TextView
+            android:id="@+id/text_skill_2"
+            style="@style/skill_text"
+            android:background="@color/teal_701"
+            android:hint="skill" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/skill_3"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="5dp"
+        app:layout_constraintStart_toEndOf="@id/skill_2"
+        app:layout_constraintTop_toBottomOf="@+id/tv_skill"
+        style="@style/card_skill">
+
+        <TextView
+            android:id="@+id/text_skill_3"
+            style="@style/skill_text"
+            android:background="@color/teal_701"
+            android:hint="skill" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/skill_4"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="5dp"
+        app:layout_constraintStart_toEndOf="@id/skill_3"
+        app:layout_constraintTop_toBottomOf="@+id/tv_skill"
+        style="@style/card_skill">
+
+        <TextView
+            android:id="@+id/text_skill_4"
+            style="@style/skill_text"
+            android:background="@color/teal_701"
+            android:hint="skill" />
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
