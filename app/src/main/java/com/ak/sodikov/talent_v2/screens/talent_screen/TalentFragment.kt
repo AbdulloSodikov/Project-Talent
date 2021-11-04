@@ -44,6 +44,7 @@ class TalentFragment : Fragment() {
         mBinding.tvProfession.text = mTalent.professionNameInTalent
         mBinding.tvEducation.text = mTalent.education
         mBinding.tvAbout.text = mTalent.info
+        mBinding.tvCity.text = mTalent.cityNameInTalent
 
                 }
 
