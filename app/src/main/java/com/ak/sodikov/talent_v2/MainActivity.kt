@@ -102,7 +102,6 @@ class MainActivity : AppCompatActivity() {
 
             )
 
-
             lifecycleScope.launch {
                 profession.forEach { roomDao.insertProfession(it) }
                 city.forEach { roomDao.insertCity(it) }
@@ -112,17 +111,6 @@ class MainActivity : AppCompatActivity() {
             }
 
         }
-     /*         private suspend fun getData (nameCity: String, idProf : Int, idSkills: Int) {
-          val allTalent = roomDao.getAllTalent().toString()
-          val cityOfTalent = roomDao.getCityWithTalent(nameCity).toString()
-          val professionOfTalent = roomDao.getProfessionWithTalents(idProf).toString()
-          val skillsOfTalent = roomDao.getSkillsOfPerson(idSkills).toString()
-
-            Log.d ("MyTag", allTalent)
-            Log.d ("MyTag", cityOfTalent)
-            Log.d ("MyTag", professionOfTalent)
-            Log.d ("MyTag", skillsOfTalent)
-      }*/
 
     override fun onDestroy() {
         super.onDestroy()

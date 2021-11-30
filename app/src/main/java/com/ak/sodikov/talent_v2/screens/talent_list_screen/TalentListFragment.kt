@@ -44,11 +44,12 @@ class TalentListFragment : Fragment() {
         mRecyclerView = mBinding.recyclerView
         mRecyclerView.adapter = mAdapter
 
-        mAdapter.onItemClick = {
+        mAdapter.onItemClick = { it ->
             val bundle = Bundle()
-            bundle.putSerializable(TALENT_ID,it)
+            bundle.putInt(TALENT_ID,it.talentId)
             APP_ACTIVITY.mNavController.navigate(R.id.action_listFragment_to_personFragment, bundle)
         }
+
         mObserverList = Observer {
             val list = it.asReversed()
             mAdapter.setList(list)
