@@ -16,8 +16,8 @@ class TalentAdapter : RecyclerView.Adapter<TalentAdapter.TalentHolder>() {
    inner class TalentHolder (view: View) : RecyclerView.ViewHolder (view) {
         val fullName:TextView = view.findViewById(R.id.tv_person_full_name)
         val profession:TextView = view.findViewById(R.id.tv_person_of_profession)
-        val education:TextView = view.findViewById(R.id.tv_education)
-       val city:TextView = view.findViewById(R.id.tv_city)
+       // val education:TextView = view.findViewById(R.id.tv_education)
+        val city:TextView = view.findViewById(R.id.tv_city)
 
         init {
             view.setOnClickListener {
@@ -35,7 +35,7 @@ class TalentAdapter : RecyclerView.Adapter<TalentAdapter.TalentHolder>() {
         val talent = mListTalent[position]
         holder.fullName.text =  "${talent.talentSurname.toString()} ${talent.talentName.toString()}"
         holder.profession.text = talent.professionNameInTalent.toString()
-        holder.education.text = "Образование: ${mListTalent[position].education.toString()}"
+       // holder.education.text = "Образование: ${mListTalent[position].education.toString()}"
         holder.city.text = talent.cityNameInTalent.toString()
     }
 

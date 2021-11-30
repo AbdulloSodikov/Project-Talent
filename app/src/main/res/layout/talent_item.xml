@@ -4,115 +4,101 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="@dimen/margin_norm"
     app:cardCornerRadius="@dimen/card_corner_radius"
     app:cardElevation="@dimen/card_elevation"
+    android:layout_margin="10dp"
     android:outlineSpotShadowColor="@color/md_indigo_50">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/item_layout_top"
             android:layout_width="match_parent"
-            android:layout_height="86dp"
-            android:background="@color/teal_701"
+            android:layout_height="120dp"
+            android:background="#F8F8F8"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/ic_default_person"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_margin="6dp"
-                android:src="@drawable/ic_baseline_person_24"
-                app:civ_border_color="@color/white"
-                app:civ_circle_background_color="@color/white"
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewImageTalent"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="1dp"
+                android:background="@color/teal_200"
+                app:cardCornerRadius="@dimen/card_corner_radius"
+                app:cardElevation="@dimen/card_elevation"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
-            </de.hdodenhof.circleimageview.CircleImageView>
+                <ImageView
+                    android:id="@+id/imageView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    app:srcCompat="@drawable/ic_person_default_image" />
+            </androidx.cardview.widget.CardView>
+
 
             <TextView
                 android:id="@+id/tv_person_full_name"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/margin_min"
-                android:layout_marginTop="@dimen/margin_norm"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:hint="Имрон Баротов"
                 android:lines="1"
-                android:text="Имрон Баротов"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/ic_default_person"
+                app:layout_constraintStart_toEndOf="@+id/cardViewImageTalent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/tv_person_of_profession"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/margin_min"
-                android:layout_marginTop="@dimen/margin_min"
-                android:text="Веб разработчик"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:hint="Веб разработчик"
                 android:textColor="@color/black"
                 android:textSize="16sp"
-                app:layout_constraintStart_toEndOf="@+id/ic_default_person"
+                app:layout_constraintStart_toEndOf="@+id/cardViewImageTalent"
                 app:layout_constraintTop_toBottomOf="@+id/tv_person_full_name" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="0dp"
-            android:layout_height="60dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/item_layout_top"
-            app:layout_constraintVertical_bias="0.0">
-
-            <TextView
-                android:id="@+id/tv_education"
-                android:layout_width="wrap_content"
-                android:layout_height="20dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
-                android:lines="1"
-                android:text="Образование:"
-                android:textSize="@dimen/test_size_small"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="NotSibling" />
 
             <TextView
                 android:id="@+id/tv_city"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="23dp"
+                android:layout_marginBottom="16dp"
                 android:hint="@string/hint_city"
                 android:textColor="@color/purple_700"
                 android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/imageView"
-                app:layout_constraintTop_toBottomOf="@+id/tv_education" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_person_of_profession"
+                app:layout_constraintVertical_bias="1.0" />
 
             <ImageView
                 android:id="@+id/imageView"
                 android:layout_width="15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_education"
+                android:layout_marginTop="22dp"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/cardViewImageTalent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_person_of_profession"
                 app:srcCompat="@drawable/ic_location" />
 
-
         </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
