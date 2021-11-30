@@ -1,4 +1,4 @@
-package com.ak.sodikov.talent_v2.screens.talent_list_screen
+package com.ak.sodikov.talent_v2.ui.talent_list_screen
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel

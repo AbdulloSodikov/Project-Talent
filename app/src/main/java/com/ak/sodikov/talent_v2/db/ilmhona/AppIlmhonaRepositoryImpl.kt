@@ -8,7 +8,7 @@ class AppIlmhonaRepositoryImpl():DatabaseRepository {
     override val allTalent: LiveData<List<Talent>>
         get() = TODO("Not yet implemented")
 
-    override suspend fun getTalent(id: Int): Talent {
+    override suspend fun getTalent(id: Int): LiveData<Talent> {
         TODO("Not yet implemented")
     }
 

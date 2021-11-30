@@ -41,7 +41,7 @@ interface AppTalentRoomDao {
 
       // Получение Таланта по id
       @Query ("SELECT * FROM talent WHERE talentId  = :id")
-      fun getTalent(id:Int) : Talent
+      fun getTalent(id:Int) :  LiveData<Talent>
 
 
     //  Получение списка Талантов по професcии //

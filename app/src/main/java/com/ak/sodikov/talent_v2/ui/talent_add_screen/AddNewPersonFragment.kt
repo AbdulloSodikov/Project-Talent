@@ -1,7 +1,6 @@
-package com.ak.sodikov.talent_v2.screens.talent_add_screen
+package com.ak.sodikov.talent_v2.ui.talent_add_screen
 
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -9,7 +8,6 @@ import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.AutoCompleteTextView
-import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import com.ak.sodikov.talent_v2.R
 import com.ak.sodikov.talent_v2.databinding.FragmentTalentAddBinding
@@ -62,10 +60,10 @@ class AddNewPersonFragment : Fragment() {
         mBinding.autoCompleteCity.setAdapter(cityAdapter)
 
 
-         var workStateResult: String = ""
-         var educationResult: String = ""
-         var professionResult: String  = ""
-         var cityResult: String = ""
+        var workStateResult: String = ""
+        var educationResult: String = ""
+        var professionResult: String = ""
+        var cityResult: String = ""
 
         mBinding.autoCompletWorkState.onItemClickListener =
             object : AdapterView.OnItemSelectedListener, AdapterView.OnItemClickListener {
@@ -103,10 +101,8 @@ class AddNewPersonFragment : Fragment() {
 
                 override fun onItemClick(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
                     educationResult = educationArray[p2].toString()
-
                 }
             }
-
         mBinding.autoCompletProfession.onItemClickListener =
             object : AdapterView.OnItemSelectedListener, AdapterView.OnItemClickListener {
                 override fun onItemSelected(
@@ -115,6 +111,7 @@ class AddNewPersonFragment : Fragment() {
                     position: Int,
                     id: Long
                 ) {
+
                 }
 
                 override fun onNothingSelected(p0: AdapterView<*>?) {

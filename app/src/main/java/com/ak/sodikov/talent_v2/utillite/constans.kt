@@ -12,4 +12,4 @@ lateinit var REPOSITORY : DatabaseRepository
 const val TYPE_DATABASE = "typ_database"
 const val TYPE_ROOM = "type_room"
 const val TYPE_ILMHONA = "type_ilmhona"
-const val TALENT_ID = "talent_id"
+const val TALENT = "talent_id"

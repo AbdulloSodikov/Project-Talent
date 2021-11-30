@@ -1,4 +1,4 @@
-package com.ak.sodikov.talent_v2.screens.talent_add_screen
+package com.ak.sodikov.talent_v2.ui.talent_add_screen
 
 import android.app.Application
 import com.ak.sodikov.talent_v2.model.entites.Talent
