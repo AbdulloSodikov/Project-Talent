@@ -1,4 +1,4 @@
-package com.ak.sodikov.talent_v2.screens.talent_list_screen
+package com.ak.sodikov.talent_v2.ui.talent_list_screen
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -12,8 +12,7 @@ import com.ak.sodikov.talent_v2.R
 import com.ak.sodikov.talent_v2.databinding.FragmentListBinding
 import com.ak.sodikov.talent_v2.model.entites.Talent
 import com.ak.sodikov.talent_v2.utillite.APP_ACTIVITY
-import com.ak.sodikov.talent_v2.utillite.TALENT_ID
-import com.ak.sodikov.talent_v2.utillite.showToast
+import com.ak.sodikov.talent_v2.utillite.TALENT
 
 
 class TalentListFragment : Fragment() {
@@ -44,12 +43,11 @@ class TalentListFragment : Fragment() {
         mRecyclerView = mBinding.recyclerView
         mRecyclerView.adapter = mAdapter
 
-        mAdapter.onItemClick = { it ->
+        mAdapter.onItemClick = {
             val bundle = Bundle()
-            bundle.putInt(TALENT_ID,it.talentId)
+            bundle.putSerializable(TALENT,it)
             APP_ACTIVITY.mNavController.navigate(R.id.action_listFragment_to_personFragment, bundle)
         }
-
         mObserverList = Observer {
             val list = it.asReversed()
             mAdapter.setList(list)

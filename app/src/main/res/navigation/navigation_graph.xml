@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/startFragment"
-        android:name="com.ak.sodikov.talent_v2.screens.start_screen.StartFragment"
+        android:name="com.ak.sodikov.talent_v2.ui.start_screen.StartFragment"
         android:label="fragment_start"
         tools:layout="@layout/fragment_start" >
         <action
@@ -23,7 +23,7 @@
     </fragment>
     <fragment
         android:id="@+id/listFragment"
-        android:name="com.ak.sodikov.talent_v2.screens.talent_list_screen.TalentListFragment"
+        android:name="com.ak.sodikov.talent_v2.ui.talent_list_screen.TalentListFragment"
         android:label="fragment_main_fragmant"
         tools:layout="@layout/fragment_list" >
         <action
@@ -40,7 +40,7 @@
     </fragment>
     <fragment
         android:id="@+id/addPersonFragment"
-        android:name="com.ak.sodikov.talent_v2.screens.talent_add_screen.AddNewPersonFragment"
+        android:name="com.ak.sodikov.talent_v2.ui.talent_add_screen.AddNewPersonFragment"
         android:label="fragment_add_person"
         tools:layout="@layout/fragment_talent_add" >
         <action
@@ -51,7 +51,7 @@
     </fragment>
     <fragment
         android:id="@+id/personFragment"
-        android:name="com.ak.sodikov.talent_v2.screens.talent_screen.TalentFragment"
+        android:name="com.ak.sodikov.talent_v2.ui.talent_screen.TalentFragment"
         android:label="fragment_person"
         tools:layout="@layout/fragment_talent" >
         <action

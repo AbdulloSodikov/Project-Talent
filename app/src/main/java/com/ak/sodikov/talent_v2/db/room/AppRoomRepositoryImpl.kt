@@ -8,7 +8,7 @@ class AppRoomRepositoryImpl(private val dao:AppTalentRoomDao) : DatabaseReposito
     override val allTalent: LiveData<List<Talent>>
         get() = dao.getAllTalent()
 
-    override suspend fun getTalent(id: Int): Talent {
+    override suspend fun getTalent(id: Int):  LiveData<Talent> {
         return dao.getTalent(id)
     }
 

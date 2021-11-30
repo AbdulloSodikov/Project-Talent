@@ -1,4 +1,4 @@
-package com.ak.sodikov.talent_v2.screens.talent_list_screen
+package com.ak.sodikov.talent_v2.ui.talent_list_screen
 
 import android.view.LayoutInflater
 import android.view.View
@@ -17,6 +17,7 @@ class TalentAdapter : RecyclerView.Adapter<TalentAdapter.TalentHolder>() {
         val fullName:TextView = view.findViewById(R.id.tv_person_full_name)
         val profession:TextView = view.findViewById(R.id.tv_person_of_profession)
         val education:TextView = view.findViewById(R.id.tv_education)
+       val city:TextView = view.findViewById(R.id.tv_city)
 
         init {
             view.setOnClickListener {
@@ -34,7 +35,8 @@ class TalentAdapter : RecyclerView.Adapter<TalentAdapter.TalentHolder>() {
         val talent = mListTalent[position]
         holder.fullName.text =  "${talent.talentSurname.toString()} ${talent.talentName.toString()}"
         holder.profession.text = talent.professionNameInTalent.toString()
-        holder.education.text = "Образование: ${mListTalent[position].info.toString()}"
+        holder.education.text = "Образование: ${mListTalent[position].education.toString()}"
+        holder.city.text = talent.cityNameInTalent.toString()
     }
 
     override fun getItemCount(): Int = mListTalent.size

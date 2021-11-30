@@ -17,10 +17,8 @@ import java.io.Serializable
             entity = City::class,
             parentColumns = ["cityName"],
             childColumns = ["cityNameInTalent"]
-
 )]
 )
-
 data class Talent(
     @PrimaryKey(autoGenerate = true) val talentId: Int = 0,
     val talentSurname: String,

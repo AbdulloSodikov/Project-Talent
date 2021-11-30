@@ -42,11 +42,9 @@ class MainActivity : AppCompatActivity() {
 
         lifecycleScope.launchWhenCreated {
             dataSours()
-            //getData("Dushanbe",3, 1)
-        }
-
 
         }
+    }
         private suspend fun dataSours() {
             val profession = listOf(
                 Profession(0, "Web developer"),
@@ -57,7 +55,6 @@ class MainActivity : AppCompatActivity() {
                 Profession(4, "Graphic developer"),
                 Profession(4, "UX/UI developer"),
             )
-
             val city = listOf(
                 City(0, "Душанбе"),
                 City(1, "Хучанд"),
@@ -74,42 +71,12 @@ class MainActivity : AppCompatActivity() {
 
             )
 
-            var person = listOf(
-
-                Talent(
-                    0, "Nurlaiev", "Muhammad", "nuraliev.m@gmail.com",
-                    "Работаю", "Я Нуралиев М.", "Степень магистра","Web developer", "Dushanbe"
-                ),
-                Talent(
-                    1, "Sodikov", "Abdullo", "sodikov.a@gmail.com",
-                    "могу работать", "Я Содиков А.","Степень магистра", "Android developer", "Khujand"
-                ),
-                Talent(
-                    2, "Ibodov", "Parviz", "parviz@gmail.com",
-                    "могу работать", "Y Parviz.","Степень магистра", "iOC developer", "Moskov"
-                ),
-                Talent(
-                    3, "Sattorova", "Mati", "sattorova@gmail.com",
-                    " не могу работать", "Я.","Степень магистра", "Full Stack developer", "Khujand"
-                )
-            )
-
-            val skillsOfTalent = listOf(
-                SkillTalentCrossRef(1, 0),
-                SkillTalentCrossRef(3, 1),
-                SkillTalentCrossRef(2, 1),
-                SkillTalentCrossRef(3, 4)
-
-            )
-
             lifecycleScope.launch {
                 profession.forEach { roomDao.insertProfession(it) }
                 city.forEach { roomDao.insertCity(it) }
-               // skills.forEach { roomDao.insertSkills(it) }
-                //person.forEach { roomDao.insertTalent(it) }
-                //skillsOfTalent.forEach { roomDao.insertTalentAndSkills(it) }
-            }
+                skills.forEach { roomDao.insertSkills(it) }
 
+            }
         }
 
     override fun onDestroy() {
