@@ -9,7 +9,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.ak.sodikov.talent_v2.R
 import com.ak.sodikov.talent_v2.databinding.FragmentStartBinding
 import com.ak.sodikov.talent_v2.utillite.APP_ACTIVITY
-import com.ak.sodikov.talent_v2.utillite.TYPE_ROOM
+
 
 
 class StartFragment : Fragment() {
@@ -32,15 +32,12 @@ class StartFragment : Fragment() {
 
     private fun initialization() {
         mViewModel = ViewModelProvider(this).get(StartFragmentViewModel::class.java)
+
         mBinding.btnFindTalent.setOnClickListener {
-            mViewModel.initDataBase(TYPE_ROOM) {
-                APP_ACTIVITY.mNavController.navigate(R.id.action_startFragment_to_listFragment)
+              APP_ACTIVITY.mNavController.navigate(R.id.action_startFragment_to_listFragment)
             }
-        }
         mBinding.btnAddTalent.setOnClickListener {
-            mViewModel.initDataBase(TYPE_ROOM) {
-                APP_ACTIVITY.mNavController.navigate(R.id.action_startFragment_to_addPersonFragment)
-            }
+             APP_ACTIVITY.mNavController.navigate(R.id.action_startFragment_to_addPersonFragment)
         }
     }
     override fun onDestroyView() {

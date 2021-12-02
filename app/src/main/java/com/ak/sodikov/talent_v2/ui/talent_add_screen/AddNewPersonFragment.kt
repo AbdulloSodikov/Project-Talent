@@ -39,23 +39,27 @@ class AddNewPersonFragment : Fragment() {
 
     private fun initialization() {
         mViewModel = ViewModelProvider(this).get(AddNewPersonFragmentViewModel::class.java)
-
         val workStateArray = resources.getStringArray(R.array.work_state)
+        val educationArray = resources.getStringArray(R.array.education)
+        val professionArray = resources.getStringArray(R.array.profession)
+        val cityArray = resources.getStringArray(R.array.city)
+
+
         val workStateAdapter =
             ArrayAdapter(requireContext(), R.layout.dropdpwn_item_work_state, workStateArray)
         mBinding.autoCompletWorkState.setAdapter(workStateAdapter)
 
-        val educationArray = resources.getStringArray(R.array.education)
+
         val educationAdapter =
             ArrayAdapter(requireContext(), R.layout.drop_down_item_education, educationArray)
         mBinding.autoCompletEducation.setAdapter(educationAdapter)
 
-        val professionArray = resources.getStringArray(R.array.profession)
+
         val professionAdapter =
             ArrayAdapter(requireContext(), R.layout.drop_down_item_profession, professionArray)
         mBinding.autoCompletProfession.setAdapter(professionAdapter)
 
-        val cityArray = resources.getStringArray(R.array.city)
+
         val cityAdapter = ArrayAdapter(requireContext(), R.layout.drop_down_item_city, cityArray)
         mBinding.autoCompleteCity.setAdapter(cityAdapter)
 
@@ -142,8 +146,6 @@ class AddNewPersonFragment : Fragment() {
                     cityResult = cityArray[p2].toString()
                 }
             }
-
-
         mBinding.btnSave.setOnClickListener {
             val sureNameResult = mBinding.textAddSureName.text.toString()
             val nameResult = mBinding.textAddName.text.toString()
@@ -180,7 +182,6 @@ class AddNewPersonFragment : Fragment() {
             }
         }
     }
-
 
     override fun onDestroyView() {
         super.onDestroyView()

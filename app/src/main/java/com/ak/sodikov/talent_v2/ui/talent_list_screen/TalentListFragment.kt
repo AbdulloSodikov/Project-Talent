@@ -23,7 +23,6 @@ class TalentListFragment : Fragment() {
     private lateinit var mAdapter: TalentAdapter
     private lateinit var mObserverList: Observer<List<Talent>>
 
-    private val someVar = "Hello world"
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

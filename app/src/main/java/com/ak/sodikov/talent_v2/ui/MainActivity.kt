@@ -1,51 +1,50 @@
-package com.ak.sodikov.talent_v2
+package com.ak.sodikov.talent_v2.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import androidx.appcompat.widget.Toolbar
-import androidx.lifecycle.lifecycleScope
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
+import com.ak.sodikov.talent_v2.R
 import com.ak.sodikov.talent_v2.databinding.ActivityMainBinding
 import com.ak.sodikov.talent_v2.db.AppTalentDatabase
 import com.ak.sodikov.talent_v2.db.room.AppTalentRoomDao
 import com.ak.sodikov.talent_v2.model.entites.City
 import com.ak.sodikov.talent_v2.model.entites.Profession
 import com.ak.sodikov.talent_v2.model.entites.Skill
-import com.ak.sodikov.talent_v2.model.entites.SkillTalentCrossRef
-import com.ak.sodikov.talent_v2.model.entites.Talent
 import com.ak.sodikov.talent_v2.utillite.APP_ACTIVITY
-import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
-    lateinit var db: AppTalentDatabase
-    lateinit var roomDao: AppTalentRoomDao
     private var _binding: ActivityMainBinding? = null
-    private val mBinding get() = _binding!!
+    private val  mBinding get() = _binding!!
     lateinit var mToolbar: Toolbar
     lateinit var mNavController: NavController
+    lateinit var mViewModel: MainActivityViewModel
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         _binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(mBinding.root)
-        mToolbar = mBinding.toolbar
-        mNavController = Navigation.findNavController(this, R.id.nav_host)
         APP_ACTIVITY = this
-        db = AppTalentDatabase.getInstance(this)
-        roomDao = db.getTalentDao()
+        initialization()
 
+    }
+
+    private fun initialization() {
+        mNavController = Navigation.findNavController(this, R.id.nav_host)
+        mToolbar = mBinding.toolbar
         setSupportActionBar(mToolbar)
         title = getString(R.string.title_talent)
 
-        lifecycleScope.launchWhenCreated {
-            dataSours()
 
-        }
+        mViewModel = ViewModelProvider(this).get(MainActivityViewModel::class.java)
+        mViewModel.initData()
+        insertStateDataToDataBase()
+
     }
-        private suspend fun dataSours() {
+        private fun insertStateDataToDataBase() {
             val profession = listOf(
                 Profession(0, "Web developer"),
                 Profession(1, "Back-end developer"),
@@ -63,26 +62,18 @@ class MainActivity : AppCompatActivity() {
                 City(4, "Хорог"),
                 City(4, "Вахдат")
             )
-            val skills = listOf<Skill>(
+            val skill = listOf(
                 Skill(0, "Java"),
                 Skill(1, "Kotlin"),
                 Skill(2, "Swift"),
                 Skill(3, "JavaScript")
 
             )
-
-            lifecycleScope.launch {
-                profession.forEach { roomDao.insertProfession(it) }
-                city.forEach { roomDao.insertCity(it) }
-                skills.forEach { roomDao.insertSkills(it) }
-
-            }
+         mViewModel.insertStateDataToDataBase(profession,city, skill)
         }
 
     override fun onDestroy() {
         super.onDestroy()
         _binding = null
-
-
     }
 }
