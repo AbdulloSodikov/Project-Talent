@@ -39,7 +39,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@color/white"
-                app:srcCompat="@drawable/ic_person_default_image" />
+                app:srcCompat="@drawable/ic_person_default_image"
+                tools:ignore="ImageContrastCheck"
+                android:contentDescription="TODO" />
         </androidx.cardview.widget.CardView>
 
 
@@ -50,6 +52,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:hint="Имрон Баротов"
+            android:hintTextColor="#78909C"
             android:lines="1"
             android:textColor="@color/black"
             android:textSize="18sp"
