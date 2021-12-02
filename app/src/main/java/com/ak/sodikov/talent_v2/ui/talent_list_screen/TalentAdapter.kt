@@ -16,7 +16,7 @@ class TalentAdapter : RecyclerView.Adapter<TalentAdapter.TalentHolder>() {
    inner class TalentHolder (view: View) : RecyclerView.ViewHolder (view) {
         val fullName:TextView = view.findViewById(R.id.tv_person_full_name)
         val profession:TextView = view.findViewById(R.id.tv_person_of_profession)
-       // val education:TextView = view.findViewById(R.id.tv_education)
+        val workState:TextView = view.findViewById(R.id.tv_workState)
         val city:TextView = view.findViewById(R.id.tv_city)
 
         init {
@@ -33,10 +33,10 @@ class TalentAdapter : RecyclerView.Adapter<TalentAdapter.TalentHolder>() {
 
     override fun onBindViewHolder(holder: TalentHolder, position: Int) {
         val talent = mListTalent[position]
-        holder.fullName.text =  "${talent.talentSurname.toString()} ${talent.talentName.toString()}"
-        holder.profession.text = talent.professionNameInTalent.toString()
-       // holder.education.text = "Образование: ${mListTalent[position].education.toString()}"
-        holder.city.text = talent.cityNameInTalent.toString()
+        holder.fullName.text =  "${talent.talentSurname} ${talent.talentName}"
+        holder.profession.text = talent.professionNameInTalent
+        holder.workState.text = talent.workState
+        holder.city.text = talent.cityNameInTalent
     }
 
     override fun getItemCount(): Int = mListTalent.size
