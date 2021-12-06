@@ -21,7 +21,7 @@ class TalentAdapter : RecyclerView.Adapter<TalentAdapter.TalentHolder>() {
 
         init {
             view.setOnClickListener {
-                onItemClick?.invoke(mListTalent[absoluteAdapterPosition])
+                onItemClick?.invoke(mListTalent[adapterPosition])
             }
         }
     }
@@ -37,12 +37,12 @@ class TalentAdapter : RecyclerView.Adapter<TalentAdapter.TalentHolder>() {
         holder.profession.text = talent.professionNameInTalent
         holder.workState.text = talent.workState
         holder.city.text = talent.cityNameInTalent
-    }
+}
 
-    override fun getItemCount(): Int = mListTalent.size
 
+override fun getItemCount(): Int = mListTalent.size
 fun setList (list: List <Talent>) {
     mListTalent = list
     notifyDataSetChanged()
-}
+  }
 }

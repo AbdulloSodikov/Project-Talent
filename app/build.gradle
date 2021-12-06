@@ -3,6 +3,7 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-kapt'
 
+
 }
 android {
     compileSdk 31
@@ -48,12 +49,12 @@ dependencies {
 
     def roomVersion = "2.3.0"
 
-    implementation("androidx.room:room-runtime:$roomVersion")
-    kapt("androidx.room:room-compiler:$roomVersion")
+    implementation("androidx.room:room-runtime:2.3.0")
+    kapt("androidx.room:room-compiler:2.3.0")
 
 
     // optional - Kotlin Extensions and Coroutines support for Room
-    implementation("androidx.room:room-ktx:$roomVersion")
+    implementation("androidx.room:room-ktx:2.3.1")
 
     // optional - RxJava2 support for Room
     implementation("androidx.room:room-rxjava2:$roomVersion")
@@ -68,22 +69,20 @@ dependencies {
     testImplementation("androidx.room:room-testing:$roomVersion")
 
     // optional - Paging 3 Integration
+    implementation ('androidx.paging:paging-runtime-ktx:3.1.0')
     implementation("androidx.room:room-paging:2.4.0-beta01")
 
     // Coroutines
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2'
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2'
 
-    def arch_version = '2.2.0-alpha01'
-    implementation "androidx.lifecycle:lifecycle-extensions:$arch_version"
-    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$arch_version"
-    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$arch_version"
-    implementation "androidx.lifecycle:lifecycle-runtime-ktx:$arch_version"
 
-    // Библиотека для Drawer menu
-    implementation "com.mikepenz:materialdrawer:7.0.0"
-    implementation "androidx.recyclerview:recyclerview:1.2.1"
-    implementation "androidx.annotation:annotation:1.2.0"
+    implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.4.0"
+
+
+
     // Add for NavController support
     implementation "com.mikepenz:materialdrawer-nav:7.0.0"
 
@@ -94,5 +93,12 @@ dependencies {
 
     //Библиотека для круглых фото -->
     implementation 'de.hdodenhof:circleimageview:3.1.0'
-    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0")
+
+    // LiveModel
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0")
+
+    //LiveData
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.4.0"
+
+
 }

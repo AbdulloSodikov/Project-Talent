@@ -18,6 +18,10 @@ interface AppTalentRoomDao {
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun insertTalent(talent: Talent)
 
+    // Для добавления списка Талантов
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
+    suspend fun insertTalents(talentList: List<Talent>)
+
     // для добовления Професии
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun insertProfession(profession: Profession)
@@ -43,6 +47,9 @@ interface AppTalentRoomDao {
     @Query("SELECT * FROM talent WHERE talentId  = :id")
     fun getTalent(id: Int): LiveData<Talent>
 
+    @Query ("DELETE  FROM talent")
+    fun deleteAllTalent()
+
 
     //  Получение списка Талантов по професcии //
     @Transaction
@@ -59,6 +66,7 @@ interface AppTalentRoomDao {
     @Transaction
     @Query("SELECT * FROM talent t, skillTalentCross st WHERE st.skillId = :skillId AND t.talentId = st.talentId")
     suspend fun getSkillsOfPerson(skillId: Int): List<TalentWithSkill>
+
 
 
 }

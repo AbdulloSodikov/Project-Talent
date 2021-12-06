@@ -26,7 +26,8 @@ class MainActivityViewModel(application: Application) : AndroidViewModel(applica
         professionList: List<Profession>,
         cityList: List<City>,
         skillList: List<Skill>
-    ) {
+    )
+    {
         viewModelScope.launch(Dispatchers.Main) {
             professionList.forEach { REPOSITORY.insertProfession(it) }
             cityList.forEach { REPOSITORY.insertCity(it) }

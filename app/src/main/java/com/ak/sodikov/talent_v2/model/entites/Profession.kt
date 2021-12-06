@@ -12,6 +12,7 @@ data class Profession (
     val professionId : Int,
 
     @ColumnInfo (name = "professionName")
+
     @PrimaryKey (autoGenerate = false)
     val professionName : String
 

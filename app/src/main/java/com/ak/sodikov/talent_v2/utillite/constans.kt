@@ -8,3 +8,5 @@ lateinit var APP_ACTIVITY : MainActivity
 lateinit var REPOSITORY : Repository
 
 const val TALENT = "talent_id"
+const val BASE_URL = "https://random-data-api.com/api/"
+const val END_POINT = "users/random_user?size=5"

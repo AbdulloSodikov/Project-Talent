@@ -172,7 +172,8 @@ class AddNewPersonFragment : Fragment() {
                     info = infoResult,
                     education = educationResult,
                     professionNameInTalent = professionResult,
-                    cityNameInTalent = cityResult
+                    cityNameInTalent = cityResult,
+                    urlAvatar = ""
                 )
                 mViewModel.insert(tamp) {
                     APP_ACTIVITY.mNavController.navigate(R.id.action_addPersonFragment_to_listFragment)

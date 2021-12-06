@@ -8,6 +8,7 @@ import androidx.room.PrimaryKey
 @Entity (tableName = "city")
 data class City  (
     val cityId : Int,
+
     @PrimaryKey (autoGenerate = false)
     @ColumnInfo (name = "cityName")
     val cityName: String

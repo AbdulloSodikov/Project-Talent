@@ -38,8 +38,7 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(mToolbar)
         title = getString(R.string.title_talent)
 
-
-        mViewModel = ViewModelProvider(this).get(MainActivityViewModel::class.java)
+        mViewModel = ViewModelProvider(this)[MainActivityViewModel::class.java]
         mViewModel.initData()
         insertStateDataToDataBase()
 

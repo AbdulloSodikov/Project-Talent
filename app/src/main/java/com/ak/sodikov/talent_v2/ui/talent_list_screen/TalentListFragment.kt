@@ -37,7 +37,7 @@ class TalentListFragment : Fragment() {
 
     }
     private fun initialization() {
-        mViewModelTalent = ViewModelProvider(this).get(TalentListFragmentViewModel::class.java)
+        mViewModelTalent = ViewModelProvider(this)[TalentListFragmentViewModel::class.java]
         mAdapter = TalentAdapter()
         mRecyclerView = mBinding.recyclerView
         mRecyclerView.adapter = mAdapter
@@ -53,7 +53,7 @@ class TalentListFragment : Fragment() {
         }
         mViewModelTalent.allTalent.observe(viewLifecycleOwner,mObserverList)
 
-                mBinding.btnAddTalent.setOnClickListener {
+            mBinding.btnAddTalent.setOnClickListener {
             APP_ACTIVITY.mNavController.navigate(R.id.action_listFragment_to_addPersonFragment)
         }
     }

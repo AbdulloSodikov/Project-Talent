@@ -13,6 +13,8 @@ interface Repository {
 
     suspend fun insertTalent (talent: Talent, onSuccess:()->Unit)
 
+    suspend fun insertTalents (talent: List<Talent>, onSuccess:()->Unit)
+
     suspend fun insertProfession (profession: Profession)
 
     suspend fun insertCity (city: City)
