@@ -40,9 +40,13 @@ class TalentAdapter : RecyclerView.Adapter<TalentAdapter.TalentHolder>() {
         holder.profession.text = talent.professionNameInTalent
         holder.workState.text = talent.workState
         holder.city.text = talent.cityNameInTalent
-        Glide.with(holder.avatar.context)
-            .load(talent.urlAvatar)
-            .into(holder.avatar)
+
+        if (talent.urlAvatar != null) {
+            Glide.with(holder.avatar.context)
+                .load(talent.urlAvatar)
+                .into(holder.avatar)
+        }
+
 
 }
 

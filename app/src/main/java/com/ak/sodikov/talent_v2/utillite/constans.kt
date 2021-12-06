@@ -9,3 +9,5 @@ lateinit var REPOSITORY : Repository
 const val TALENT = "talent_id"
 const val BASE_URL = "https://random-data-api.com/"
 const val END_POINT = "api/users/random_user?size=12"
+const  val ROOM = "room"
+const val RETROFIT = "retrofit"

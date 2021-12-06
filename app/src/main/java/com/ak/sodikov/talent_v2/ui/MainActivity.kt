@@ -12,6 +12,8 @@ import com.ak.sodikov.talent_v2.model.entites.City
 import com.ak.sodikov.talent_v2.model.entites.Profession
 import com.ak.sodikov.talent_v2.model.entites.Skill
 import com.ak.sodikov.talent_v2.utillite.APP_ACTIVITY
+import com.ak.sodikov.talent_v2.utillite.RETROFIT
+import com.ak.sodikov.talent_v2.utillite.ROOM
 
 class MainActivity : AppCompatActivity() {
     private var _binding: ActivityMainBinding? = null
@@ -37,7 +39,8 @@ class MainActivity : AppCompatActivity() {
         title = getString(R.string.title_talent)
 
         mViewModel = ViewModelProvider(this)[MainActivityViewModel::class.java]
-        mViewModel.initData()
+
+        mViewModel.initData(RETROFIT)
         insertStateDataToDataBase()
 
     }

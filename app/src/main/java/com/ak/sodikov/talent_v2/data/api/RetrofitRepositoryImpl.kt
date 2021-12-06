@@ -17,7 +17,7 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class RetrofitRepositoryImpl (/*private val dao: AppTalentRoomDao*/) : Repository  {
+class RetrofitRepositoryImpl (private val dao: AppTalentRoomDao) : Repository  {
 
     override val allTalents: LiveData<List<Talent>>
         get() = talents
@@ -50,25 +50,25 @@ class RetrofitRepositoryImpl (/*private val dao: AppTalentRoomDao*/) : Repositor
         TODO("Not yet implemented")
     }
 
-    override suspend fun insertTalent(talent: Talent) {
-        TODO("Not yet implemented")
+    override suspend fun insertTalent(_talent: Talent) {
+         dao.insertTalent(_talent)
     }
 
 
-    override suspend fun insertTalents(talent: List<Talent>) {
-
+    override suspend fun insertTalents(_talents: List<Talent>) {
+            dao.insertTalents(_talents)
     }
 
-    override suspend fun insertProfession(profession: Profession) {
-        TODO("Not yet implemented")
+    override suspend fun insertProfession(_profession: Profession) {
+        dao.insertProfession(_profession)
     }
 
-    override suspend fun insertCity(city: City) {
-        TODO("Not yet implemented")
+    override suspend fun insertCity(_city: City) {
+        dao.insertCity(_city)
     }
 
-    override suspend fun insertSkill(skill: Skill) {
-        TODO("Not yet implemented")
+    override suspend fun insertSkill(_skill: Skill) {
+        dao.insertSkill(_skill)
     }
 
     override suspend fun deleteAllTalent() {
