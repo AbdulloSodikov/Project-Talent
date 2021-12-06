@@ -1,10 +1,10 @@
-package com.ak.sodikov.talent_v2.db
+package com.ak.sodikov.talent_v2.data
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.ak.sodikov.talent_v2.db.room.AppTalentRoomDao
+import com.ak.sodikov.talent_v2.data.room.AppTalentRoomDao
 import com.ak.sodikov.talent_v2.model.entites.*
 import com.ak.sodikov.talent_v2.model.entites.Talent
 

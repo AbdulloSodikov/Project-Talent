@@ -8,7 +8,7 @@
     tools:context=".ui.talent_screen.TalentFragment">
 
     <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/ic_default_person2"
+        android:id="@+id/talent_avatar"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_gravity="center"
@@ -27,19 +27,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:hint="Cодиков Абудлло"
+        android:hint="Имя Фамилия "
         android:textColor="@color/black"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ic_default_person2" />
+        app:layout_constraintTop_toBottomOf="@+id/talent_avatar" />
 
     <TextView
         android:id="@+id/tv_profession"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:hint="Android developer"
+        android:hint="Профессия "
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -130,8 +130,8 @@
 
     <TextView
         android:id="@+id/tv_about"
-        android:layout_width="328dp"
-        android:layout_height="147dp"
+        android:layout_width="350dp"
+        android:layout_height="100dp"
         android:layout_marginTop="37dp"
         android:hint="@string/hint_about_talent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -144,9 +144,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp"
         android:src="@drawable/ic_location"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_about" />
 
@@ -155,11 +153,23 @@
         android:layout_width="211dp"
         android:layout_height="32dp"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         android:hint="@string/hint_city"
         android:textColor="@color/black"
         android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView2"
         app:layout_constraintTop_toBottomOf="@+id/tv_about" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="Связатся "
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_city" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

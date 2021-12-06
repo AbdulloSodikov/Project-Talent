@@ -8,8 +8,6 @@ import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import com.ak.sodikov.talent_v2.R
 import com.ak.sodikov.talent_v2.databinding.ActivityMainBinding
-import com.ak.sodikov.talent_v2.db.AppTalentDatabase
-import com.ak.sodikov.talent_v2.db.room.AppTalentRoomDao
 import com.ak.sodikov.talent_v2.model.entites.City
 import com.ak.sodikov.talent_v2.model.entites.Profession
 import com.ak.sodikov.talent_v2.model.entites.Skill

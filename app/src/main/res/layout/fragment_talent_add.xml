@@ -22,7 +22,7 @@
             android:orientation="vertical">
 
             <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/ic_default_person2"
+                android:id="@+id/talent_avatar"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_gravity="center"
@@ -46,7 +46,7 @@
                 app:errorEnabled="true"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/ic_default_person2"
+                app:layout_constraintTop_toBottomOf="@id/talent_avatar"
                 tools:layout_editor_absoluteY="200dp">
 
                 <com.google.android.material.textfield.TextInputEditText

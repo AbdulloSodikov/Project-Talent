@@ -51,7 +51,7 @@ class TalentListFragment : Fragment() {
             val list = it.asReversed()
             mAdapter.setList(list)
         }
-        mViewModelTalent.allTalent.observe(viewLifecycleOwner,mObserverList)
+        mViewModelTalent.allTalents.observe(viewLifecycleOwner,mObserverList)
 
             mBinding.btnAddTalent.setOnClickListener {
             APP_ACTIVITY.mNavController.navigate(R.id.action_listFragment_to_addPersonFragment)
@@ -63,6 +63,6 @@ class TalentListFragment : Fragment() {
         super.onDestroyView()
         binding = null
         mRecyclerView.adapter = null
-        mViewModelTalent.allTalent.removeObserver(mObserverList)
+        mViewModelTalent.allTalents.removeObserver(mObserverList)
     }
 }

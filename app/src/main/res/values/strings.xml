@@ -8,6 +8,7 @@
     <string name="title_talent">Talent</string>
     <string name="hint_profession">Профессия</string>
     <string name="todo">TODO</string>
+    <string name="not_connetct_to_api">Нет подключения</string>
 
     <string-array name="work_state">
         <item>Могу работать</item>

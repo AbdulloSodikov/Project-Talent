@@ -1,4 +1,4 @@
-package com.ak.sodikov.talent_v2.db.room
+package com.ak.sodikov.talent_v2.data.room
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
@@ -21,6 +21,7 @@ interface AppTalentRoomDao {
     // Для добавления списка Талантов
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun insertTalents(talentList: List<Talent>)
+
 
     // для добовления Професии
     @Insert(onConflict = OnConflictStrategy.IGNORE)
@@ -49,6 +50,7 @@ interface AppTalentRoomDao {
 
     @Query ("DELETE  FROM talent")
     fun deleteAllTalent()
+
 
 
     //  Получение списка Талантов по професcии //
