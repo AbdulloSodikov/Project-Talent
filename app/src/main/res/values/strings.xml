@@ -7,6 +7,7 @@
     <string name="hint_about_talent">about</string>
     <string name="title_talent">Talent</string>
     <string name="hint_profession">Профессия</string>
+    <string name="todo">TODO</string>
 
     <string-array name="work_state">
         <item>Могу работать</item>
