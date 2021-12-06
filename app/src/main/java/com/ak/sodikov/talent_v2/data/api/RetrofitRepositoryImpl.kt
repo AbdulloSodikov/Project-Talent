@@ -36,7 +36,6 @@ class RetrofitRepositoryImpl (/*private val dao: AppTalentRoomDao*/) : Repositor
                 Log.d("TEST_TAG", "after return : $response")
                 if (response.body() != null) {
                     talents.value = response.body()
-
                 }
             }
 
@@ -51,9 +50,10 @@ class RetrofitRepositoryImpl (/*private val dao: AppTalentRoomDao*/) : Repositor
         TODO("Not yet implemented")
     }
 
-    override suspend fun insertTalent(talent: Talent, onSuccess: () -> Unit) {
+    override suspend fun insertTalent(talent: Talent) {
         TODO("Not yet implemented")
     }
+
 
     override suspend fun insertTalents(talent: List<Talent>) {
 
@@ -68,6 +68,10 @@ class RetrofitRepositoryImpl (/*private val dao: AppTalentRoomDao*/) : Repositor
     }
 
     override suspend fun insertSkill(skill: Skill) {
+        TODO("Not yet implemented")
+    }
+
+    override suspend fun deleteAllTalent() {
         TODO("Not yet implemented")
     }
 }

@@ -1,5 +1,6 @@
 package com.ak.sodikov.talent_v2.data.api
 
+
 import com.ak.sodikov.talent_v2.utillite.BASE_URL
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -13,5 +14,6 @@ object RetrofitClient  {
         .build()
 
     fun getRandomDataApi(): RandomDataApi = retrofitInstance.create(RandomDataApi::class.java)
+
 
 }

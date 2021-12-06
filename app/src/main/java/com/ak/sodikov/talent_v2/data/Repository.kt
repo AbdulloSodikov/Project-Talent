@@ -11,7 +11,7 @@ interface Repository {
 
     suspend fun getTalent (id : Int) : LiveData<Talent>
 
-    suspend fun insertTalent (talent: Talent, onSuccess:()->Unit)
+    suspend fun insertTalent (talent: Talent)
 
     suspend fun insertTalents (talents: List<Talent>)
 
@@ -20,5 +20,7 @@ interface Repository {
     suspend fun insertCity (city: City)
 
     suspend fun insertSkill (skill: Skill)
+
+    suspend fun deleteAllTalent()
 
 }

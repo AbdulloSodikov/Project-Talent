@@ -20,7 +20,7 @@ interface AppTalentRoomDao {
 
     // Для добавления списка Талантов
     @Insert(onConflict = OnConflictStrategy.IGNORE)
-    suspend fun insertTalents(talentList: List<Talent>)
+    suspend fun insertTalents(talents: kotlin.collections.List<com.ak.sodikov.talent_v2.model.entites.Talent>)
 
 
     // для добовления Професии

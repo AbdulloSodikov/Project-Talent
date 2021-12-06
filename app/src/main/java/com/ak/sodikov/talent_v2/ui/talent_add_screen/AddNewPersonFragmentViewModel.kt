@@ -12,9 +12,9 @@ class AddNewPersonFragmentViewModel(application: Application) : AndroidViewModel
 
     fun insert(talent: Talent, onSuccess: () -> Unit) {
         viewModelScope.launch(Dispatchers.Main) {
-            REPOSITORY.insertTalent(talent) {
-                onSuccess()
+            REPOSITORY.insertTalent(talent)
+
             }
         }
-    }
+
 }

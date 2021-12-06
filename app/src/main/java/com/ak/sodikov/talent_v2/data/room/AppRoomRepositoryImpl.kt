@@ -15,13 +15,14 @@ class AppRoomRepositoryImpl(private val dao:AppTalentRoomDao) : Repository {
         return dao.getTalent(id)
     }
 
-    override suspend fun insertTalent(talent: Talent, onSuccess: () -> Unit) {
+    override suspend fun insertTalent(talent: Talent) {
         dao.insertTalent(talent)
-        onSuccess()
+
     }
 
     override suspend fun insertTalents(talents: List<Talent>) {
         dao.insertTalents(talents)
+
     }
 
     override suspend fun insertProfession(profession: Profession) {
@@ -32,6 +33,10 @@ class AppRoomRepositoryImpl(private val dao:AppTalentRoomDao) : Repository {
     }
     override suspend fun insertSkill(skill: Skill) {
         dao.insertSkill(skill)
+    }
+
+    override suspend fun deleteAllTalent() {
+        dao.deleteAllTalent()
     }
 
 }

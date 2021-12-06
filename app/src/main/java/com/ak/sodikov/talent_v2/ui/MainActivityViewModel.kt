@@ -1,6 +1,7 @@
 package com.ak.sodikov.talent_v2.ui
 
 import android.app.Application
+import com.ak.sodikov.talent_v2.model.entites.Talent
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import com.ak.sodikov.talent_v2.data.AppTalentDatabase
